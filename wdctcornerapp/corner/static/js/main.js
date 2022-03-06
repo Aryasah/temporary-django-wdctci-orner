@@ -5,6 +5,10 @@
           name: "Amit Kumar",
         },
         {
+          img: "spandan.jpeg",
+          name: "Spandan Pal",
+        },
+        {
           img: "Anushka Mandalpa2.jpeg",
           name: "Anushka Mandal",
         },
