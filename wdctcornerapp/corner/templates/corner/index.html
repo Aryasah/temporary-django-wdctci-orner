@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      WDCT Corner
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div id="three-container"></div>
+    <section id="welcome-section">
+      <h1 style="color: gray">
+        WDCT Corner
+        <a
+          href="/gallery"
+          class="entergallery"
+          >Enter Room</a
+        >
+      </h1>
+
+    </section>
+    <div id="gallery" class="gallery">
+      <div class="col">
+        <div class="image">
+          <img
+            src="{% static 'img/1.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="image">
+          <img
+          src="{% static 'img/2.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="image">
+          <img
+          src="{% static 'img/9.gif' %}"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col">
+        <div class="image">
+          <img
+            src="https://images.pexels.com/photos/10050979/pexels-photo-10050979.jpeg?cs=srgb&dl=pexels-%D0%B8%D0%BB%D1%8C%D1%8F-%D0%BF%D0%B0%D1%85%D0%BE%D0%BC%D0%BE%D0%B2-10050979.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+            alt=""
+          />
+        </div>
+        <div class="image">
+          <img
+            src="https://images.pexels.com/photos/1128660/pexels-photo-1128660.jpeg?cs=srgb&dl=pexels-nur-andi-ravsanjani-gusma-1128660.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+            alt=""
+          />
+        </div>
+        <div class="image">
+          <img
+            src="https://images.pexels.com/photos/9699293/pexels-photo-9699293.jpeg?cs=srgb&dl=pexels-lada-rezantseva-9699293.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col">
+        <div class="image">
+          <img
+            src="https://images.pexels.com/photos/6405575/pexels-photo-6405575.jpeg?cs=srgb&dl=pexels-daria-sannikova-6405575.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+            alt=""
+          />
+        </div>
+        <div class="image">
+          <img
+            src="https://images.pexels.com/photos/10162526/pexels-photo-10162526.jpeg?cs=srgb&dl=pexels-svetlana%F0%9F%8E%9E-10162526.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+            alt=""
+          />
+        </div>
+        <div class="image">
+          <img
+            src="https://images.pexels.com/photos/4394807/pexels-photo-4394807.jpeg?cs=srgb&dl=pexels-woodysmedia-4394807.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <!-- <script src="./script.js"></script> -->
+
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/TextGeometry.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/FontUtils.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/pnltri.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/droid_sans_bold.typeface.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
+
+      THREE.ShapeUtils.triangulateShape = (function () {
+        var pnlTriangulator = new PNLTRI.Triangulator();
+        return function triangulateShape(contour, holes) {
+          return pnlTriangulator.triangulate_polygon([contour].concat(holes));
+        };
+      })();
+    </script>
+    <script src="{% static 'js/newscript.js' %}"></script>
+    <script>
+      document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            console.log("loaded");
+            setTimeout(() => {
+                loadend();
+            }, 4000);
+        } else {
+            console.log("not loaded");
+            setTimeout(() => {
+                loadend();
+            }, 4000);
+        }
+    };
+      function loadend() {
+        document.getElementsByTagName('body')[0].style.overflowY="visible"
+        document.getElementById('three-container').style.display= "none";
+
+        document.getElementById('welcome-section').style.display= "flex";
+        document.getElementById('gallery').style.display = "flex";
+    }
+    </script>
+  </body>
+</html>
