@@ -3,91 +3,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      WDCT Corner
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDCT Corner</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
     <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css" />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-    
   </head>
   <body>
     <!-- partial:index.partial.html -->
+    {% comment %}
     <div id="three-container"></div>
+    {% endcomment %}
     <section id="welcome-section">
       <h1 style="color: gray">
         WDCT Corner
-        <a
-          href="/gallery"
-          class="entergallery"
-          >Enter Room</a
-        >
+        <a href="/gallery" class="entergallery">Enter Room</a>
       </h1>
-
     </section>
     <div id="gallery" class="gallery">
       <div class="col">
         <div class="image">
-          <img
-            src="{% static 'img/1.jpg' %}"
-            alt=""
-          />
+          <img src="{% static 'all_images/Retuja Chatterjee.png' %}" alt="" />
         </div>
         <div class="image">
-          <img
-          src="{% static 'img/2.jpg' %}"
-            alt=""
-          />
+          <img src="{% static 'all_images/Aditya Mohapatra6.jpg' %}" alt="" />
         </div>
         <div class="image">
-          <img
-          src="{% static 'img/9.gif' %}"
-            alt=""
-          />
+          <img src="{% static 'all_images/Rishi Marodia6.jpg' %}" alt="" />
         </div>
       </div>
       <div class="col">
         <div class="image">
-          <img
-            src="https://images.pexels.com/photos/10050979/pexels-photo-10050979.jpeg?cs=srgb&dl=pexels-%D0%B8%D0%BB%D1%8C%D1%8F-%D0%BF%D0%B0%D1%85%D0%BE%D0%BC%D0%BE%D0%B2-10050979.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
-            alt=""
-          />
+          <img src="{% static 'all_images/Aniket Kamble1.jpg' %}" alt="" />
         </div>
         <div class="image">
-          <img
-            src="https://images.pexels.com/photos/1128660/pexels-photo-1128660.jpeg?cs=srgb&dl=pexels-nur-andi-ravsanjani-gusma-1128660.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
-            alt=""
-          />
+          <img src="{% static 'all_images/Avinash Y3.jpg' %}" alt="" />
         </div>
         <div class="image">
-          <img
-            src="https://images.pexels.com/photos/9699293/pexels-photo-9699293.jpeg?cs=srgb&dl=pexels-lada-rezantseva-9699293.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
-            alt=""
-          />
+          <img src="{% static 'all_images/Shreya Maithani2.jpg' %}" alt="" />
         </div>
       </div>
       <div class="col">
         <div class="image">
-          <img
-            src="https://images.pexels.com/photos/6405575/pexels-photo-6405575.jpeg?cs=srgb&dl=pexels-daria-sannikova-6405575.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
-            alt=""
-          />
+          <img src="{% static 'all_images/Anushka Mandal1.jpg' %}" alt="" />
         </div>
         <div class="image">
-          <img
-            src="https://images.pexels.com/photos/10162526/pexels-photo-10162526.jpeg?cs=srgb&dl=pexels-svetlana%F0%9F%8E%9E-10162526.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
-            alt=""
-          />
+          <img src="{% static 'all_images/Amit Kumar1.jpg' %}" alt="" />
         </div>
         <div class="image">
-          <img
-            src="https://images.pexels.com/photos/4394807/pexels-photo-4394807.jpeg?cs=srgb&dl=pexels-woodysmedia-4394807.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
-            alt=""
-          />
+          <img src="{% static 'all_images/Riddhi Chowdhury4.jpg' %}" alt="" />
         </div>
       </div>
     </div>
@@ -108,7 +75,7 @@
     <script>
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
-      }
+      };
 
       THREE.ShapeUtils.triangulateShape = (function () {
         var pnlTriangulator = new PNLTRI.Triangulator();
@@ -119,26 +86,23 @@
     </script>
     <script src="{% static 'js/newscript.js' %}"></script>
     <script>
-      document.onreadystatechange = function() {
+      document.onreadystatechange = function () {
         if (document.readyState !== "complete") {
-            console.log("loaded");
-            setTimeout(() => {
-                loadend();
-            }, 4000);
+          console.log("loaded");
+          setTimeout(() => {
+            loadend();
+          }, 4000);
         } else {
-            console.log("not loaded");
-            setTimeout(() => {
-                loadend();
-            }, 4000);
+          console.log("not loaded");
+          setTimeout(() => {
+            loadend();
+          }, 4000);
         }
-    };
+      };
       function loadend() {
-        document.getElementsByTagName('body')[0].style.overflowY="visible"
-        document.getElementById('three-container').style.display= "none";
-
-        document.getElementById('welcome-section').style.display= "flex";
-        document.getElementById('gallery').style.display = "flex";
-    }
+        document.getElementsByTagName("body")[0].style.overflowY = "visible";
+        document.getElementById("welcome-section").style.display = "flex";
+      }
     </script>
   </body>
 </html>
