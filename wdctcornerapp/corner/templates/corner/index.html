@@ -9,15 +9,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+    <meta name="theme-color" content="#000">
+    <meta name="description" content="Open the doors of an ephemeral gallery which exhibits digital arts, paintings, and illustrations of the creative aficionados and voyage down the art valley to experience the vibrant displays of art and design.">
     <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css" />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="shortcut icon" href="{% static 'img/aarohan.png' %}" type="image/x-icon">
   </head>
   <body>
     <!-- partial:index.partial.html -->
     {% comment %}
     <div id="three-container"></div>
     {% endcomment %}
-    <section id="welcome-section">
+    <section id="welcome-section" style="user-select: none;">
       <h1 style="color: gray">
         WDCT Corner
         <a href="/gallery" class="entergallery">Enter Room</a>
